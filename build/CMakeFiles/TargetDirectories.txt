@@ -1,0 +1,8 @@
+/home/vadim/image_delivery/build/CMakeFiles/edit_cache.dir
+/home/vadim/image_delivery/build/CMakeFiles/rebuild_cache.dir
+/home/vadim/image_delivery/build/server/CMakeFiles/server.dir
+/home/vadim/image_delivery/build/server/CMakeFiles/edit_cache.dir
+/home/vadim/image_delivery/build/server/CMakeFiles/rebuild_cache.dir
+/home/vadim/image_delivery/build/client/CMakeFiles/client.dir
+/home/vadim/image_delivery/build/client/CMakeFiles/edit_cache.dir
+/home/vadim/image_delivery/build/client/CMakeFiles/rebuild_cache.dir
