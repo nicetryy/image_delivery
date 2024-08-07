@@ -1,4 +1,8 @@
+#include <iostream>
+
 #include "server.h"
+
+#define PORT 8080
 
 int main() {
     server::Server server(PORT);

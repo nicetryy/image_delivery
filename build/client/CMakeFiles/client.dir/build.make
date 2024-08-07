@@ -108,6 +108,7 @@ client_EXTERNAL_OBJECTS =
 client/client: client/CMakeFiles/client.dir/client_main.cpp.o
 client/client: client/CMakeFiles/client.dir/client.cpp.o
 client/client: client/CMakeFiles/client.dir/build.make
+client/client: libcommon_pch.a
 client/client: client/CMakeFiles/client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vadim/image_delivery/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable client"
 	cd /home/vadim/image_delivery/build/client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/client.dir/link.txt --verbose=$(VERBOSE)

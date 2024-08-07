@@ -63,6 +63,7 @@ CMAKE_BINARY_DIR = /home/vadim/image_delivery/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/common_pch.dir/all
 all: server/all
 all: client/all
 .PHONY : all
@@ -73,6 +74,7 @@ preinstall: client/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/common_pch.dir/clean
 clean: server/clean
 clean: client/clean
 .PHONY : clean
@@ -108,18 +110,44 @@ server/clean: server/CMakeFiles/server.dir/clean
 .PHONY : server/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/common_pch.dir
+
+# All Build rule for target.
+CMakeFiles/common_pch.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vadim/image_delivery/build/CMakeFiles --progress-num=4,5,6 "Built target common_pch"
+.PHONY : CMakeFiles/common_pch.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/common_pch.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/common_pch.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 0
+.PHONY : CMakeFiles/common_pch.dir/rule
+
+# Convenience name for target.
+common_pch: CMakeFiles/common_pch.dir/rule
+.PHONY : common_pch
+
+# clean rule for target.
+CMakeFiles/common_pch.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/clean
+.PHONY : CMakeFiles/common_pch.dir/clean
+
+#=============================================================================
 # Target rules for target server/CMakeFiles/server.dir
 
 # All Build rule for target.
-server/CMakeFiles/server.dir/all:
+server/CMakeFiles/server.dir/all: CMakeFiles/common_pch.dir/all
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f server/CMakeFiles/server.dir/build.make server/CMakeFiles/server.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vadim/image_delivery/build/CMakeFiles --progress-num=4,5,6 "Built target server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vadim/image_delivery/build/CMakeFiles --progress-num=7,8,9 "Built target server"
 .PHONY : server/CMakeFiles/server.dir/all
 
 # Build rule for subdir invocation for target.
 server/CMakeFiles/server.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server/CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 0
 .PHONY : server/CMakeFiles/server.dir/rule
@@ -137,7 +165,7 @@ server/CMakeFiles/server.dir/clean:
 # Target rules for target client/CMakeFiles/client.dir
 
 # All Build rule for target.
-client/CMakeFiles/client.dir/all:
+client/CMakeFiles/client.dir/all: CMakeFiles/common_pch.dir/all
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/depend
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vadim/image_delivery/build/CMakeFiles --progress-num=1,2,3 "Built target client"
@@ -145,7 +173,7 @@ client/CMakeFiles/client.dir/all:
 
 # Build rule for subdir invocation for target.
 client/CMakeFiles/client.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 6
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client/CMakeFiles/client.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/vadim/image_delivery/build/CMakeFiles 0
 .PHONY : client/CMakeFiles/client.dir/rule

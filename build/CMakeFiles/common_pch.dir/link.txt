@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcommon_pch.a CMakeFiles/common_pch.dir/pch.cpp.o
+/usr/bin/ranlib libcommon_pch.a

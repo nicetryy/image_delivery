@@ -117,6 +117,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named common_pch
+
+# Build rule for target.
+common_pch: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 common_pch
+.PHONY : common_pch
+
+# fast build rule for target.
+common_pch/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/build
+.PHONY : common_pch/fast
+
+#=============================================================================
 # Target rules for targets named server
 
 # Build rule for target.
@@ -142,6 +155,45 @@ client/fast:
 	$(MAKE) $(MAKESILENT) -f client/CMakeFiles/client.dir/build.make client/CMakeFiles/client.dir/build
 .PHONY : client/fast
 
+# target to build an object file
+cmake_pch.hxx.gch:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/cmake_pch.hxx.gch
+.PHONY : cmake_pch.hxx.gch
+
+# target to preprocess a source file
+cmake_pch.hxx.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/cmake_pch.hxx.i
+.PHONY : cmake_pch.hxx.i
+
+# target to generate assembly for a file
+cmake_pch.hxx.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/cmake_pch.hxx.s
+.PHONY : cmake_pch.hxx.s
+
+pch.o: pch.cpp.o
+.PHONY : pch.o
+
+# target to build an object file
+pch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/pch.cpp.o
+.PHONY : pch.cpp.o
+
+pch.i: pch.cpp.i
+.PHONY : pch.i
+
+# target to preprocess a source file
+pch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/pch.cpp.i
+.PHONY : pch.cpp.i
+
+pch.s: pch.cpp.s
+.PHONY : pch.s
+
+# target to generate assembly for a file
+pch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/common_pch.dir/build.make CMakeFiles/common_pch.dir/pch.cpp.s
+.PHONY : pch.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -151,7 +203,14 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... client"
+	@echo "... common_pch"
 	@echo "... server"
+	@echo "... cmake_pch.hxx.gch"
+	@echo "... cmake_pch.hxx.i"
+	@echo "... cmake_pch.hxx.s"
+	@echo "... pch.o"
+	@echo "... pch.i"
+	@echo "... pch.s"
 .PHONY : help
 
 

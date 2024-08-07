@@ -1,5 +1,7 @@
 #include "client.h"
 
+#define PORT 8080
+
 int main() {
 
     client::Client client(PORT);

@@ -1,3 +1,4 @@
+/home/vadim/image_delivery/build/CMakeFiles/common_pch.dir
 /home/vadim/image_delivery/build/CMakeFiles/edit_cache.dir
 /home/vadim/image_delivery/build/CMakeFiles/rebuild_cache.dir
 /home/vadim/image_delivery/build/server/CMakeFiles/server.dir
